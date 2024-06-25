@@ -27,8 +27,8 @@ npm install quixo
 ### Import Modul
 
 ```js
-const quixo = require("quixo");
-const path = require("path"); // impor modul path jika Anda ingin mendownload file
+const quixo = require('quixo');
+const path = require('path'); // impor modul path jika Anda ingin mendownload file
 ```
 
 ### Contoh Penggunaan Method Quixo
@@ -38,12 +38,12 @@ GET:
 ```js
 // Contoh penggunaan methot GET
 quixo
-  .get("https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1")
+  .get('https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1')
   .then((response) => {
-    console.log("GET Response:", response);
+    console.log('GET Response:', response);
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
 ```
 
@@ -53,19 +53,19 @@ POST:
 // Contoh penggunaan methot POST
 quixo
   .post(
-    "https://raw.githubusercontent.com/salmanpripender/foo/main/posts/",
+    'https://raw.githubusercontent.com/salmanpripender/foo/main/posts/',
     JSON.stringify({
-      title: "foo",
-      body: "bar",
+      title: 'foo',
+      body: 'bar',
       userId: 1,
     }),
-    { "Content-Type": "application/json" },
+    { 'Content-Type': 'application/json' }
   )
   .then((response) => {
-    console.log("POST Response:", response);
+    console.log('POST Response:', response);
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
 ```
 
@@ -75,20 +75,20 @@ PUT:
 // Contoh penggunaan methot PUT
 quixo
   .put(
-    "https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1",
+    'https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1',
     JSON.stringify({
       id: 1,
-      title: "foo",
-      body: "bar",
+      title: 'foo',
+      body: 'bar',
       userId: 1,
     }),
-    { "Content-Type": "application/json" },
+    { 'Content-Type': 'application/json' }
   )
   .then((response) => {
-    console.log("PUT Response:", response);
+    console.log('PUT Response:', response);
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
 ```
 
@@ -97,12 +97,12 @@ DELETE:
 ```js
 // Contoh penggunaan methot DELETE
 quixo
-  .delete("https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1")
+  .delete('https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1')
   .then((response) => {
-    console.log("DELETE Response:", response);
+    console.log('DELETE Response:', response);
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
 ```
 
@@ -112,17 +112,17 @@ PATCH:
 // Contoh penggunaan methot PATCH
 quixo
   .patch(
-    "https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1",
+    'https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1',
     JSON.stringify({
-      title: "foo",
+      title: 'foo',
     }),
-    { "Content-Type": "application/json" },
+    { 'Content-Type': 'application/json' }
   )
   .then((response) => {
-    console.log("PATCH Response:", response);
+    console.log('PATCH Response:', response);
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
 ```
 
@@ -131,12 +131,12 @@ HEAD:
 ```js
 // Contoh penggunaan methot HEAD
 quixo
-  .head("https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1")
+  .head('https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1')
   .then((response) => {
-    console.log("HEAD Response:", response);
+    console.log('HEAD Response:', response);
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
 ```
 
@@ -145,12 +145,12 @@ OPTIONS:
 ```js
 // Contoh penggunaan methot OPTIONS
 quixo
-  .options("https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1")
+  .options('https://raw.githubusercontent.com/salmanpripender/foo/main/posts/1')
   .then((response) => {
-    console.log("OPTIONS Response:", response);
+    console.log('OPTIONS Response:', response);
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
 ```
 
@@ -160,14 +160,14 @@ DOWNLOAD FILE:
 // Contoh penggunaan methot downloadFile tanpa menentukan nama file
 quixo
   .downloadFile(
-    "https://raw.githubusercontent.com/salmanpripender/foo/main/images/image.jpg",
-    path.join(__dirname, "downloads"),
+    'https://raw.githubusercontent.com/salmanpripender/foo/main/images/image.jpg',
+    path.join(__dirname, 'downloads')
   )
   .then((filePath) => {
     console.log(`File downloaded to: ${filePath}`);
   })
   .catch((error) => {
-    console.error("Download error:", error);
+    console.error('Download error:', error);
   });
 ```
 
@@ -175,15 +175,15 @@ quixo
 // Contoh penggunaan methot downloadFile dengan menentukan nama file
 quixo
   .downloadFile(
-    "https://raw.githubusercontent.com/salmanpripender/foo/main/images/image.jpg",
-    path.join(__dirname, "downloads"),
-    "my_custom_name.jpg",
+    'https://raw.githubusercontent.com/salmanpripender/foo/main/images/image.jpg',
+    path.join(__dirname, 'downloads'),
+    'my_custom_name.jpg'
   )
   .then((filePath) => {
     console.log(`File downloaded to: ${filePath}`);
   })
   .catch((error) => {
-    console.error("Download error:", error);
+    console.error('Download error:', error);
   });
 ```
 
