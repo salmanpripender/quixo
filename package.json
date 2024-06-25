@@ -1,0 +1,32 @@
+{
+  "name": "quixo",
+  "version": "1.0.0",
+  "author": {
+    "name": "Salman",
+    "url": "https://github.com/salmanpripender"
+  },
+  "homepage": "https://github.com/salmanpripender/quixo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salmanpripender/quixo.git"
+  },
+  "description": "Modul Node.js ringan untuk mengambil data secara efisien dengan pendekatan yang sederhana.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=14.14"
+  },
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "request",
+    "fetch",
+    "promise",
+    "xhr"
+  ],
+  "dependencies": {
+    "prettier": "^3.3.2"
+  }
+}
